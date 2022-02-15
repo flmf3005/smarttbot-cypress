@@ -1,6 +1,6 @@
 {
   "defaultCommandTimeout": 10000,
-  "baseUrl": "https://app.smarttbot.com/public/login/",
+  "baseUrl": "https://app.smarttbot.com/public/ranking/",
   "testFiles": "**/*.feature",
   "video": false
 }

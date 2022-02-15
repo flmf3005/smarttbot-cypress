@@ -1,24 +1,25 @@
 /// <reference types="Cypress" />
 
-import LoginElements from "../elements/LoginElements";
-const loginElements = new LoginElements();
+//Elements
+const botaoLogin = ":nth-child(2) > a";
+const botaoRecuperarSenha = ".jss13";
+
+//Global Consts
 const url = Cypress.config("baseUrl");
 
+//Actions
 class LoginPage {
-  // Acessa o site que será testado
   acessarSite() {
     cy.visit(url);
   }
 
-  // Clica no botão que acessa a página de login do site
   clicarBotaoPaginaLogin() {
-    cy.get(loginElements.botaoLogin());
+    cy.get(botaoLogin).click();
   }
 
-  // Verifica se o botão tem o texto "Esqueceu sua senha?"
   visualizarBotaoRecuperarSenha() {
     expect(
-      cy.get(loginElements.botaoRecuperarSenha()).should(
+      cy.get(botaoRecuperarSenha).should(
       "contain",
       "Esqueceu a senha?"
     )).to.exist;
