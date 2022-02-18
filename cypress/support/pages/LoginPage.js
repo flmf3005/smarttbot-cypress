@@ -7,7 +7,7 @@ const textUsername = "[id=login-username]";
 const textSenha = "[id=login-password]";
 const botaoAcessar = "[id=login-button]";
 const botaoUsuario = ".jss126";
-const mensagemErro = ".notifications-tr"
+const mensagemErro = ".notification"
 
 //Global Variables
 const url = Cypress.config("baseUrl");

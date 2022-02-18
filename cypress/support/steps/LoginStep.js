@@ -7,7 +7,7 @@ Given("acesso o site Ranking", () => {
   loginPage.acessarSite();
 });
 
-When("acesso a pagina de login", () => {
+And("acesso a pagina de login", () => {
   loginPage.clicarBotaoPaginaLogin();
 });
 
@@ -16,15 +16,11 @@ And("preencho os dados de login", () => {
 });
 
 And("preencho os dados de login incorretamente", () => {
-  loginPage.preencherDadosLogin("qateste", "teste")
+  loginPage.preencherDadosLogin(Cypress.env("user"), "teste")
 });
 
-And("clico no botao Acessar", () => {
+When("clico no botao Acessar", () => {
   loginPage.clicarBotaoLogin();
-});
-
-Then("devo visualizar botao de recuperar senha esquecida", () => {
-  loginPage.visualizarBotaoRecuperarSenha();
 });
 
 Then("devo acessar o sistema", () => {
