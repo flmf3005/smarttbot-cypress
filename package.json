@@ -17,6 +17,7 @@
     "cucumber-html-reporter": "^5.5.0",
     "cypress": "9.5.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-xpath": "^1.6.2",
     "multiple-cucumber-html-reporter": "^1.19.0"
   },
   "cypress-cucumber-preprocessor": {

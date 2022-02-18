@@ -7,7 +7,8 @@ const textUsername = "[id=login-username]";
 const textSenha = "[id=login-password]";
 const botaoAcessar = "[id=login-button]";
 const botaoUsuario = ".jss126";
-const mensagemErro = ".notification"
+const mensagemErro = ".notification-message";
+const botaoRecusarNotificoes = "#pushActionRefuse";
 
 //Global Variables
 const url = Cypress.config("baseUrl");
@@ -44,7 +45,21 @@ class LoginPage {
   }
 
   visualizarMensagemErroLogin() {
-    expect(cy.get(mensagemErro)).to.exist;
+    cy.get(mensagemErro).then((mensagem) => {
+      expect(mensagem).to.exist;
+      expect(mensagem).to.contain('Login e/ou senha inválido(s)');
+    })
+  }
+
+  clicarBotaoRecusarNotificacoes() {
+    cy.get(botaoRecusarNotificoes).click();
+  }
+
+  login() {
+    this.acessarSite();
+    this.clicarBotaoPaginaLogin();
+    this.preencherDadosLogin(Cypress.env("user"), Cypress.env("pwd"));
+    this.clicarBotaoLogin();
   }
 }
 
