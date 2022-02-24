@@ -1,17 +1,17 @@
 /// <reference types="Cypress" />
 
 //Elements
-const botaoLogin = ":nth-child(2) > a";
-const botaoRecuperarSenha = ".jss13";
-const textUsername = "[id=login-username]";
-const textSenha = "[id=login-password]";
-const botaoAcessar = "[id=login-button]";
-const botaoUsuario = ".jss126";
-const mensagemErro = ".notification-message";
-const botaoRecusarNotificoes = "#pushActionRefuse";
+const botaoLogin = ':nth-child(2) > a';
+const botaoRecuperarSenha = '.jss13';
+const textUsername = '[id=login-username]';
+const textSenha = '[id=login-password]';
+const botaoAcessar = '[id=login-button]';
+const botaoUsuario = '.jss126';
+const mensagemErro = '.notification-message';
+const botaoRecusarNotificoes = '#pushActionRefuse';
 
 //Global Variables
-const url = Cypress.config("baseUrl");
+const url = Cypress.config('baseUrl');
 
 //Actions
 class LoginPage {
@@ -24,14 +24,11 @@ class LoginPage {
   }
 
   visualizarBotaoRecuperarSenha() {
-    expect(
-      cy.get(botaoRecuperarSenha).should(
-      "contain",
-      "Esqueceu a senha?"
-    )).to.exist;
+    expect(cy.get(botaoRecuperarSenha).should('contain', 'Esqueceu a senha?'))
+      .to.exist;
   }
 
-  clicarBotaoLogin(){
+  clicarBotaoLogin() {
     cy.get(botaoAcessar).click();
   }
 
@@ -48,7 +45,7 @@ class LoginPage {
     cy.get(mensagemErro).then((mensagem) => {
       expect(mensagem).to.exist;
       expect(mensagem).to.contain('Login e/ou senha inválido(s)');
-    })
+    });
   }
 
   clicarBotaoRecusarNotificacoes() {
@@ -58,7 +55,7 @@ class LoginPage {
   login() {
     this.acessarSite();
     this.clicarBotaoPaginaLogin();
-    this.preencherDadosLogin(Cypress.env("user"), Cypress.env("pwd"));
+    this.preencherDadosLogin(Cypress.env('user'), Cypress.env('pwd'));
     this.clicarBotaoLogin();
   }
 }
