@@ -77,7 +77,7 @@ Nesse projeto utilizei o PageObjects como design pattern, desacoplando ao máxim
 
 O projeto ficou estruturado da seguinte forma:
 
-![Estrutura](https://imgur.com/0UEswxN.jpg)
+![Estrutura](https://imgur.com/qwcBIDY.jpg)
 
 Na pasta _integration_ estão localizadas as features criadas para o projeto.
 
