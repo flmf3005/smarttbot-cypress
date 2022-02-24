@@ -77,11 +77,11 @@ Nesse projeto utilizei o PageObjects como design pattern, desacoplando ao máxim
 
 O projeto ficou estruturado da seguinte forma:
 
-![Estrutura](https://imgur.com/bG7JvJq.jpg)
+![Estrutura](https://imgur.com/0UEswxN.jpg)
 
-Na pasta _integration_ estão localizadas as features criadas para o projeto
+Na pasta _integration_ estão localizadas as features criadas para o projeto.
 
-Na pasta _support/steps_ estão localizados os arquivos contendo os passos que serão executados conforme os cenários escritos nas features.
+Para cada uma das features foi criada uma pasta com o mesmo nome, onde estão localizados os arquivos contendo os passos que serão executados conforme os cenários escritos nas features.
 
 Na pasta _support/pages_ estão localizados os arquivos contendo o mapeamento dos elementos e as ações realizadas.
 
