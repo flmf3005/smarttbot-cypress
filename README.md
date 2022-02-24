@@ -1,10 +1,13 @@
 # Smarttbot-cypress
------------
+
+---
 
 Projeto criado para execução de Testes Automatizados da plataforma SmarttBot.
 
 ## Tecnologias utilizadas
-----
+
+---
+
 Principais tecnologias utilizadas no código.
 
 💻 [Node.js](https://nodejs.org/)
@@ -13,7 +16,7 @@ Principais tecnologias utilizadas no código.
 
 ❄️ [Cucumber](https://cucumber.io)
 
-----
+---
 
 ## Passo a passo para execução dos testes
 
@@ -24,7 +27,7 @@ Principais tecnologias utilizadas no código.
 Para conseguir executar o código, os módulos do Node devem ser instalados. Sendo assim, antes de qualquer execução deve ser executado no terminal o seguinte código.
 
     $ yarn install
-    
+
 <!--endsec-->
 
 ### Execução dos testes
@@ -37,15 +40,15 @@ Alguns comandos foram adicionados no package.json para facilitar a execução.
 
 Para executar os testes pelo Test Runner do próprio cypress, basta executar o seguinte comando:
 
-    $ yarn cy:open
-    
+    $ yarn open
+
 <!--endsec-->
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
 
 Para executar os testes em modo headless diretamente pelo terminal basta executar o seguinte comando:
 
     $ yarn test
-    
+
 <!--endsec-->
 
 Esse comando irá executar os testes pelo navegador padrão do Cypress.
@@ -57,7 +60,7 @@ Foram adicionados mais duas opções de execução dos testes nos navegadores Ch
 Para executar os testes pelo Chrome, basta executar o seguinte comando:
 
     $ yarn test:chrome
-    
+
 <!--endsec-->
 
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
@@ -65,9 +68,8 @@ Para executar os testes pelo Chrome, basta executar o seguinte comando:
 Para executar os testes pelo Edge, basta executar o seguinte comando:
 
     $ yarn test:edge
-    
-<!--endsec-->
-----
+
+## <!--endsec-->
 
 ## Arquitetura do Projeto
 
@@ -77,13 +79,14 @@ O projeto ficou estruturado da seguinte forma:
 
 ![Estrutura](https://imgur.com/bG7JvJq.jpg)
 
-Na pasta *integration* estão localizadas as features criadas para o projeto
+Na pasta _integration_ estão localizadas as features criadas para o projeto
 
-Na pasta *support/steps* estão localizados os arquivos contendo os passos que serão executados conforme os cenários escritos nas features.
+Na pasta _support/steps_ estão localizados os arquivos contendo os passos que serão executados conforme os cenários escritos nas features.
 
-Na pasta *support/pages* estão localizados os arquivos contendo o mapeamento dos elementos e as ações realizadas.
+Na pasta _support/pages_ estão localizados os arquivos contendo o mapeamento dos elementos e as ações realizadas.
 
-----
+---
+
 ## Relatório de execução
 
 Também foi utilizado nesse projeto um pacote node que gera um relatório de execução.
@@ -92,15 +95,15 @@ Também foi utilizado nesse projeto um pacote node que gera um relatório de exe
 
 Para gerar o relatório, basta executar o seguinte comando:
 
-    $ yarn postcypress:run
-    
+    $ yarn report
+
 <!--endsec-->
 
-Após executar o comando, o relatório será gerado na pasta *reports*.
+Após executar o comando, o relatório será gerado na pasta _reports_.
 
 Nesse repositório foi salvo um report de exemplo, mas a pasta está sendo ignorada pelo arquivo .gitignore a fim de não gerar um volume excessivo de arquivos.
 
-----
+---
 
 Assim está finalizado o fluxo de todas as atividades propostas no início deste projeto. Faça as devidas referências caso utilize este projeto.
 

@@ -1,5 +1,4 @@
 /// <reference types="Cypress" />
-require('cypress-xpath');
 
 //Elements
 const botaoCopiarHVL =

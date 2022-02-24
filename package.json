@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
+    "open": "cypress open",
     "test": "cypress run",
     "test:chrome": "cypress run --browser chrome",
     "test:edge": "cypress run --browser edge",
-    "postcypress:run": "node ./cypress/support/report-cucumber.js"
+    "report": "node ./cypress/support/report-cucumber.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,7 @@
     "prettier": "^2.5.1"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/steps/",
+    "nonGlobalStepDefinitions": true,
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",

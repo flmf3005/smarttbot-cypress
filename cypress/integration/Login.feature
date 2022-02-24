@@ -4,13 +4,11 @@ Feature: Login site Ranking
         Given acesso o site Ranking
         And acesso a pagina de login
 
-    @login
     Scenario: Fazer login com sucesso
         And preencho os dados de login
         When clico no botao Acessar
         Then devo acessar o sistema
 
-    @loginFalha
     Scenario: Realizar login com dados inválidos
         And preencho os dados de login incorretamente
         When clico no botao Acessar
